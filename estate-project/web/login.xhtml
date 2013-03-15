@@ -16,8 +16,11 @@
         <h1>Login to Web App</h1>
         
         <h:form>
-            <p>Username: <p:inputText/></p>
-            <p>Password: <p:inputText/></p>
+            
+            <p>Username: <p:inputText id="name" required="true"/></p>
+            <p:message for="name"/>
+            <p>Password: <p:password id="pass" required="true"/></p>
+            <p:message for="pass"/>
             
         <p class="remember_me">         
             <p:selectBooleanCheckbox />
@@ -25,7 +28,7 @@
         </p>
             
         <p class="submit">
-            <p:commandButton value="Submit"/>
+            <p:commandButton value="Submit" update="@form"/>
         </p>
       </h:form>
     </div>
