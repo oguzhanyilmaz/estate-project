@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <h:form id="menuForm">
+                <p:menubar>
+                         <p:submenu label="Kayıt" >
+                             <p:submenu label="Yeni Kayıt" >
+                                 <p:menuitem value="Ev" />
+                                 <p:menuitem value="Arsa"/>    
+                                 <p:menuitem value="Dükkan"  />
+                             </p:submenu>
+                             <p:menuitem  value="Tüm Kayıtlar"/>
+                         </p:submenu>
+
+                         <p:submenu label="İşlemler">
+                             <p:submenu label="Ev" >
+                                <p:menuitem value="Kiralık"/>
+                                <p:menuitem value="Satılık"/>
+                             </p:submenu>
+                             
+                             <p:submenu label="Arsa" >
+                                <p:menuitem value="Kiralık"/>
+                                <p:menuitem value="Satılık" />
+                             </p:submenu>
+                             
+                             <p:submenu label="Dükkan" >
+                                <p:menuitem value="Kiralık"/>
+                                <p:menuitem value="Satılık"/>
+                             </p:submenu>
+                                
+                          
+                         </p:submenu>
+                        
+                        
+                        <p:submenu label="Hesaplamalar" >
+                             <p:menuitem value="Banka Kredi Oranları" />
+                             <p:menuitem value="Döviz Kurları"/>
+                             <p:menuitem value="Komisyon Hesaplama"/>
+                        </p:submenu>
+                        
+                        <p:submenu label="Müşteri Takip">
+                            
+                        </p:submenu>
+                                   
+                     </p:menubar>
+        
+        </h:form>
+    
+</ui:composition>
+
