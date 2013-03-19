@@ -3,123 +3,26 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
-
-        <h:head>
-            <f:facet name="first">
-                <meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
-                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>Ana Sayfa</title>
-            </f:facet>
-
-            
-
-            <style type="text/css">
-                .ui-widget, ui-widget .ui-widget{
-                    font-size: 12px !important;
-                }
-                
-                .content{
-                position: absolute;
-                border: outset;
-                left: 171px;
-                top: 10px;
-                width: 1056px;
-                height: 630px;
-                
-                }
-	
-                .menu{
-                    position: relative;
-                    left: -14px;
-                    top: -8px;
-                    width: 1052px;
-                }
-                
-                .resim{
-                    position: relative;
-                    left: -14px;
-                    top: -5px;
-                    width: 1052px;
-                    border: white;      
-                }
-                
-                .arka{
-                    background-color: #fff6c6;
-                }
-                
-            </style>
-        </h:head>
-
-
-    <h:body styleClass="arka">
-
-           
-            <p:panel styleClass="content" header="Piramit Koza Gayrimenkul Otomasyonu">
-                <h:form>
-                    <p:panel styleClass="resim">
-                        <p:graphicImage value="images/piramitKoza.jpg" />
-                    </p:panel>
-                    <p:menubar  styleClass="menu">
-                         <p:submenu label="Kayıt" >
-                             <p:submenu label="Yeni Kayıt" >
-                                 <p:menuitem value="Ev" />
-                                 <p:menuitem value="Arsa"/>    
-                                 <p:menuitem value="Dükkan"  />
-                             </p:submenu>
-                             <p:menuitem  value="Tüm Kayıtlar"/>
-                         </p:submenu>
-
-                         <p:submenu label="İşlemler">
-                             <p:submenu label="Ev" >
-                                <p:menuitem value="Kiralık"/>
-                                <p:menuitem value="Satılık"/>
-                             </p:submenu>
-                             
-                             <p:submenu label="Arsa" >
-                                <p:menuitem value="Kiralık"/>
-                                <p:menuitem value="Satılık"/>
-                             </p:submenu>
-                             
-                             <p:submenu label="Dükkan" >
-                                <p:menuitem value="Kiralık"/>
-                                <p:menuitem value="Satılık"/>
-                             </p:submenu>
-                                
-                          
-                         </p:submenu>
-                        
-                        
-                        <p:submenu label="Hesaplamalar" >
-                             <p:menuitem value="Banka Kredi Oranları" />
-                             <p:menuitem value="Döviz Kurları"/>
-                             <p:menuitem value="Komisyon Hesaplama"/>
-                        </p:submenu>
-                        
-                        <p:submenu label="Müşteri Takip">
-                            
-                        </p:submenu>
-                        
-                        
-                   </p:menubar> 
-                    
-                </h:form>
-                
-                
-                <h:form id="anaForm">
-                    
-                    
-                </h:form>
-                
-            </p:panel>
-
-
-                        
-                
-
-
-        </h:body>
-
+      xmlns:p="http://primefaces.org/ui"
+      >
+ 
+    <h:head>
+        
+    </h:head>
     
-</html>
+    <h:body>
+        
+        <ui:composition template="resources/template.xhtml">
+            
+            <ui:param name="pageTitle" value="Ana Sayfa"/>
+            <ui:define name="content" >
+    
+                Hoşgeldiniz..
+            </ui:define>
+            
+        </ui:composition>
+        
+    </h:body>
+    
+ </html>
 
