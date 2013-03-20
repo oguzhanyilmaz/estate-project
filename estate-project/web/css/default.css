@@ -37,12 +37,26 @@ body {
         border: 1px solid green;
         min-height: 450px;
         background-color: #ffffff;
+        
 }
+
+
 
 #bottom {
 	position: relative;
 	padding: 5px;
 	margin: 5px 5px;
 	border-top: 1px solid green;
+}
+
+#sideBar{
+    
+        float: left;	
+	width: 250px;
+        position: relative;
+        min-height: 440px;
+        background-color: #cccccc;
+	padding-bottom: 10px;
+   
 }
 

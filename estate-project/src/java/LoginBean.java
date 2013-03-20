@@ -30,9 +30,6 @@ public class LoginBean implements Serializable{
             return null;}
     }
     
-    public String evKayit()
-    {
-        return "/insertProperty.xhtml?faces-redirect=true";
-    }
+    
     
 }
