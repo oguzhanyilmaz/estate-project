@@ -16,7 +16,7 @@
         <h1>Login to Web App</h1>
         
         <h:form>
-            
+            <p:growl id="growl"/>
             <p>Username: <p:inputText id="name" required="true"  requiredMessage="boş girilmez" value="#{loginBean.ad}"/></p>
             <p:growl for="name" />
             <p>Password: <p:password id="pass" required="true" requiredMessage="boş girilmez" value="#{loginBean.sifre}"/></p>
