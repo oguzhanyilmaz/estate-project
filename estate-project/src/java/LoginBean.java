@@ -26,8 +26,8 @@ public class LoginBean implements Serializable{
         if (this.ad.equals("admin") && this.sifre.equals("admin")) {
             return "/index.xhtml?faces-redirect=true";
         }
-        else
-            return null;
+        else{
+            return null;}
     }
     
     public String evKayit()
