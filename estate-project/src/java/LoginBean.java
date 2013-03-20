@@ -3,7 +3,6 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
-
 public class LoginBean implements Serializable{
     
     private String ad;
@@ -25,10 +24,15 @@ public class LoginBean implements Serializable{
     public String girisYap()
     {
         if (this.ad.equals("admin") && this.sifre.equals("admin")) {
-            return "/index.xhtml";
+            return "/index.xhtml?faces-redirect=true";
         }
         else
             return null;
+    }
+    
+    public String evKayit()
+    {
+        return "/insertProperty.xhtml?faces-redirect=true";
     }
     
 }
