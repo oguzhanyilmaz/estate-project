@@ -9,23 +9,26 @@
     
     <ui:param name="pageTitle"  value="Ev Kayıt Sayfası"/>
     
-    <ui:define name="content">
-    
-        <p:panel header="Ev Kayıt Ekranı">
-            <h:form>
-                <h:panelGrid columns="2">
-                    Kategori: <p:selectOneMenu>
-                        <f:selectItem itemValue="1" itemLabel="Kiralık"/>
-                        <f:selectItem itemValue="2" itemLabel="Satılık"/>
-                              </p:selectOneMenu>
-                    Adres : <p:inputTextarea />
-                    Sahibinin Adı: <p:inputText/>
-                    Sahibinin Soyadı: <p:inputText/>
-                    Sahibinin Telefon Numarası: <p:inputMask mask="0(999) 999 99 99"/>
-                    <p:commandButton value="Kaydet"/>
-                </h:panelGrid>
-            </h:form>        
-        </p:panel>
+        <ui:define name="content">
+            
+            <p:fieldset legend="Ev Kayıt" id="evPanel">
+                
+                    <h:form>
+                        <h:panelGrid columns="2" >
+                            Kategori: <p:selectOneMenu>
+                                <f:selectItem itemValue="1" itemLabel="Kiralık"/>
+                                <f:selectItem itemValue="2" itemLabel="Satılık"/>
+                                      </p:selectOneMenu>
+                            Adres : <p:inputTextarea />
+                            Sahibinin Adı: <p:inputText/>
+                            Sahibinin Soyadı: <p:inputText/>
+                            Sahibinin Telefon Numarası: <p:inputMask mask="0(999) 999 99 99"/>
+                            <p:commandButton value="Kaydet" />
+                        </h:panelGrid>
+                    </h:form>        
+            </p:fieldset>
+       
     </ui:define>
+     
 </ui:composition>
 
