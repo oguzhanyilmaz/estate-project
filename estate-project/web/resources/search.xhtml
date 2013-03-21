@@ -17,14 +17,24 @@
                                     <f:selectItem itemValue="2" itemLabel="İşyeri"/>
                                     <f:selectItem itemValue="3" itemLabel="Arsa"/>                                    
                                 </p:selectOneMenu>
+                   
                     Kategoriler: <p:selectOneMenu>
                                     <f:selectItem itemValue="1" itemLabel="Kiralık"/>
                                     <f:selectItem itemValue="2" itemLabel="Satılık"/>
                                  </p:selectOneMenu>
                     </h:panelGrid>  
+                <p:separator/>
                 Fiyat Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
+                <p:separator/>
+                m<sup>2</sup> Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
+                <p:separator/>
                     
                 <p:commandButton value="Ara" style="margin-left: 3px"/>
+                
+                
+                
+                <p:calendar mode="inLine" style="margin-bottom: 5px;"/>
+                
             </h:form>
     </h:body>
 </ui:composition>
