@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="resources/template.xhtml">
+    
+    <ui:param name="pageTitle" value="Müşteri Kayıt Sayfası"/>
+    
+    <ui:define name="content">
+    
+            <h:body>
+                <h:form>
+                    <p:growl id="growl"/>
+                    <p:fieldset legend="Müşteri Kaydı" >
+                        <h:panelGrid columns="4" style="padding-left: 90px">
+                            <h:outputLabel value="Ad:"/>
+                            <p:inputText id="ad" required="true" requiredMessage="Boş Bırakılmaz!"/> 
+                            <h:outputLabel value="Soyad"/>
+                            <p:inputText id="soyad" required="true" requiredMessage="Boş Bırakılmaz!"/>
+                            <h:outputLabel value="Ev Tel:"/>
+                            <p:inputText id="evTel" />
+                            <h:outputLabel value="İş Tel:"/>
+                            <p:inputText id="isTel"/>
+                            <h:outputLabel value="Cep Tel:"/>
+                            <p:inputText id="cepTel"/>
+                            <h:outputLabel value="Email:" />
+                            <p:inputText id="email"  value="#{clientBean.email}" validatorMessage="Geçerli Bir Email Adresi Giriniz!"/>                    
+                            <h:outputLabel value="Açıklama:"/>
+                            <p:inputTextarea rows="5" cols="19" maxlength="100"       
+                                              autoResize="false"/>
+                            <h:outputLabel value="Adres:"/>
+                            <p:inputTextarea rows="5" cols="19" maxlength="100"       
+                                              autoResize="false"/>
+                        </h:panelGrid>
+                        <p:commandButton value="Kaydet" update="growl" />
+                    </p:fieldset>
+                </h:form>
+            </h:body>
+        </ui:define>
+</ui:composition>
+
