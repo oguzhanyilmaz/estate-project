@@ -8,11 +8,9 @@
                          <p:submenu label="Kayıt" >
                              <p:submenu label="Yeni Kayıt" >
                                  <p:menuitem value="Ev" action="#{insertingBean.evKayit()}"  />
-                                     
                                  
-                                     
-                                 <p:menuitem value="Arsa"/>    
-                                 <p:menuitem value="İşyeri"  />
+                                 <p:menuitem value="Arsa" action="#{insertingBean.arsaKayit()}"/>    
+                                 <p:menuitem value="İşyeri" action="#{insertingBean.isyeriKayit()}" />
                              </p:submenu>
                              <p:menuitem  value="Tüm Kayıtlar"/>
                          </p:submenu>           
@@ -24,7 +22,7 @@
                         </p:submenu>
                         
                         <p:submenu label="Müşteri Takip">
-                            
+                           
                         </p:submenu>
                                    
                      </p:menubar>

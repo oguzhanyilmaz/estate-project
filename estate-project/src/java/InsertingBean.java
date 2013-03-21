@@ -14,4 +14,14 @@ public class InsertingBean implements Serializable{
         return "/insertProperty.xhtml?faces-redirect=true";
     }
     
+    public String arsaKayit()
+    {
+        return "/insertLand.xhtml?faces-redirect=true";
+    }
+    
+    public String isyeriKayit()
+    {
+        return "/insertWorkPlace.xhtml?faces-redirect=true";
+    }
+    
 }
