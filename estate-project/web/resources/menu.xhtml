@@ -17,7 +17,8 @@
                         
                         <p:submenu label="Hesaplamalar" >
                              <p:menuitem value="Banka Kredi Oranları" />
-                             <p:menuitem value="Döviz Kurları"/>
+                             <p:menuitem value="Döviz Kurları" action="#{currencyBean.currencyInit()}"/>
+                                
                              <p:menuitem value="Komisyon Hesaplama"/>
                         </p:submenu>
                         
@@ -25,7 +26,7 @@
                             <p:menuitem value="Müşteri Kayıt Ekle"  action="#{clientBean.clientKayit()}"/>
                              <p:menuitem value="Tüm Müşterilerin Kaydı"/>   
                         </p:submenu>
-                    <p:menuitem value="Ajanda" />
+                    <p:menuitem value="Ajanda" action="#{scheduleBean.scheduleInit()}"/>
                         
                         
                                    
