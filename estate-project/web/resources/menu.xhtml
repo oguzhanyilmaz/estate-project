@@ -2,33 +2,23 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:p="http://primefaces.org/ui">
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
     <h:form id="menuForm">
                 <p:menubar>
-                         <p:submenu label="Kayıt" >
-                             <p:submenu label="Yeni Kayıt" >
-                                 <p:menuitem value="Ev" action="#{insertingBean.evKayit()}"  />
-                                 
-                                 <p:menuitem value="Arsa" action="#{insertingBean.arsaKayit()}"/>
-                                 <p:menuitem value="İşyeri" action="#{insertingBean.isyeriKayit()}" />
-                             </p:submenu>
-                             <p:menuitem  value="Tüm Kayıtlar"/>
-                         </p:submenu>           
-                        
-                        <p:submenu label="Hesaplamalar" >
-                             <p:menuitem value="Banka Kredi Oranları" />
-                             <p:menuitem value="Döviz Kurları" action="#{currencyBean.currencyInit()}"/>
-                                
-                             <p:menuitem value="Komisyon Hesaplama"/>
-                        </p:submenu>
+                    <p:menuitem value="Yeni Kayıt" action="#{saveBean.kayitYonlendir()}"/>           
                         
                         <p:submenu label="Müşteri Takip">
                             <p:menuitem value="Müşteri Kayıt Ekle"  action="#{clientBean.clientKayit()}"/>
                              <p:menuitem value="Tüm Müşterilerin Kaydı"/>   
                         </p:submenu>
                     <p:menuitem value="Ajanda" action="#{scheduleBean.scheduleInit()}"/>
-                        
-                        
+                       
+                    
+                    <p:menuitem style="margin-right: 10px;"> 
+                        <p:commandButton value="Logout" icon="ui-icon-extlink" />
+                    </p:menuitem>
+                  
                                    
                      </p:menubar>
         

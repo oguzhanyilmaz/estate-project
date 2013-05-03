@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="resources/template.xhtml">
+    
+    <ui:param name="pageTitle" value="Gayrimenkul Kayıt Sayfası"/>
+    
+    <ui:define name="content">
+        <h:form id="saveForm">
+            <p:fieldset legend="Gayrimenkul Kayıt Ekranı">
+                <p:tabView style="width: 500px; float: left;">
+                            <p:tab id="houseTab" title="Ev Kayıt">
+                                <h:panelGrid columns="2" >
+                                        Kategori: <p:selectOneMenu>
+                                                    <f:selectItem itemValue="1" itemLabel="Kiralık"/>
+                                                    <f:selectItem itemValue="2" itemLabel="Satılık"/>
+                                                  </p:selectOneMenu>
+                                        Metrekare: <p:inputText />
+                                        Oda Sayısı: <p:inputText/>
+                                        Salon Sayısı: <p:inputText/>
+                                        Sahibinin Adı: <p:inputText/>
+                                        Sahibinin Soyadı: <p:inputText/>
+                                        Sahibinin Telefon Numarası: <p:inputMask mask="0(999) 999 99 99"/>
+                                        Adres : <p:inputTextarea />
+                                        <p:commandButton value="Kaydet" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab id="landTab" title="Arsa Kayıt">
+                                <h:panelGrid columns="2" >
+                                        Kategori: <p:selectOneMenu>
+                                                    <f:selectItem itemValue="1" itemLabel="Kiralık"/>
+                                                    <f:selectItem itemValue="2" itemLabel="Satılık"/>
+                                                  </p:selectOneMenu>
+                                        Metrekare: <p:inputText />
+                                        Sahibinin Adı: <p:inputText/>
+                                        Sahibinin Soyadı: <p:inputText/>
+                                        Sahibinin Telefon Numarası: <p:inputMask mask="0(999) 999 99 99"/>
+                                        Adres : <p:inputTextarea />
+                                        <p:commandButton value="Kaydet" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab id="workTab" title="İşyeri Kayıt">
+                                <h:panelGrid columns="2" >
+                                        Kategori: <p:selectOneMenu>
+                                                    <f:selectItem itemValue="1" itemLabel="Kiralık"/>
+                                                    <f:selectItem itemValue="2" itemLabel="Satılık"/>
+                                                  </p:selectOneMenu>
+                                        Metrekare: <p:inputText />
+                                        Sahibinin Adı: <p:inputText/>
+                                        Sahibinin Soyadı: <p:inputText/>
+                                        Sahibinin Telefon Numarası: <p:inputMask mask="0(999) 999 99 99"/>
+                                        Adres : <p:inputTextarea />
+                                        <p:commandButton value="Kaydet" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                </p:tabView>
+            </p:fieldset>
+                </h:form>
+   
+        </ui:define>
+</ui:composition>
+

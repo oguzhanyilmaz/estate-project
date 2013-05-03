@@ -10,31 +10,91 @@
     </h:head>
     <h:body>
             <h:form>
-                
-                <h:panelGrid columns="2">
-                    Emlak Tipi: <p:selectOneMenu>
-                                    <f:selectItem itemValue="1" itemLabel="Konut"/>
-                                    <f:selectItem itemValue="2" itemLabel="İşyeri"/>
-                                    <f:selectItem itemValue="3" itemLabel="Arsa"/>                                    
-                                </p:selectOneMenu>
-                   
-                    Kategoriler: <p:selectOneMenu>
-                                    <f:selectItem itemValue="1" itemLabel="Kiralık"/>
-                                    <f:selectItem itemValue="2" itemLabel="Satılık"/>
-                                 </p:selectOneMenu>
-                    </h:panelGrid>  
-                <p:separator/>
-                Fiyat Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
-                <p:separator/>
-                m<sup>2</sup> Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
-                <p:separator/>
+                <p:tabView>
+                    <p:tab id="searchTab" title="İlan Arama">
                     
-                <p:commandButton value="Ara" style="margin-left: 3px"/>
-                
-                
-                
-                <p:calendar mode="inLine" style="margin-bottom: 5px;"/>
-                
+                        <h:panelGrid columns="2">
+                        Emlak Tipi: <p:selectOneMenu>
+                                        <f:selectItem itemValue="1" itemLabel="Konut"/>
+                                        <f:selectItem itemValue="2" itemLabel="İşyeri"/>
+                                        <f:selectItem itemValue="3" itemLabel="Arsa"/>                                    
+                                    </p:selectOneMenu>
+
+                        Kategoriler: <p:selectOneMenu>
+                                        <f:selectItem itemValue="1" itemLabel="Kiralık"/>
+                                        <f:selectItem itemValue="2" itemLabel="Satılık"/>
+                                     </p:selectOneMenu>
+                        </h:panelGrid>  
+                    <p:separator/>
+                    Fiyat Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
+                    <p:separator/>
+                    m<sup>2</sup> Aralığı: <p:inputText size="5"/> - <p:inputText size="5"/>
+                    <p:separator/>
+
+                    <p:commandButton value="Ara" style="margin-left: 3px"/>
+
+                    </p:tab>
+                    
+                    <p:tab title="Müşteri Arama">
+                    
+                        <h:panelGrid columns="2">
+                            Ad: <p:inputText/>
+                            Soyad: <p:inputText/>
+                            
+                        </h:panelGrid>  
+                    
+
+                    <p:commandButton value="Ara" style="margin-left: 3px"/>
+
+                    </p:tab>
+
+                    <p:tab id="curTab" title="Hesaplamalar">
+                        <h:panelGrid columns="1">
+                            <p:commandButton value="Döviz Kurları" action="#{currencyBean.bringCurrency()}" update="liste" />
+                            <p:dataTable value="#{currencyBean.kurlar}" var="kur" id="liste" style="position: relative; float: left; width: 200px;">
+
+                                <p:column headerText="Birim">
+                                    #{kur.unit}
+                                </p:column>
+
+                                <p:column headerText="Döviz Cinsi">
+                                    #{kur.isim}
+                                </p:column>
+
+                                <p:column headerText="Alış">
+                                    #{kur.forexBuying}
+                                </p:column>
+
+                                <p:column headerText="Satış">
+                                    #{kur.forexSelling}
+                                </p:column>
+
+                                </p:dataTable>
+                         </h:panelGrid>
+                        
+                        <p:separator/>
+                           
+                        <p:fieldset legend="Kredi Hesaplama">
+                            
+                            <h:panelGrid columns="2">
+                                Kredi Tutarı: <p:inputText value="#{hesapBean.miktar}"/>
+                                Vade: <p:inputText value="#{hesapBean.taksit}"/>
+                                Faiz Oranı: <p:inputText value="#{hesapBean.faiz}"/>
+                                <p:commandButton value="Hesapla" onclick="dlg.show();" action="#{hesapBean.taksitTutariBul()}" type="button"/>
+                            </h:panelGrid>
+                            
+                        </p:fieldset>
+                        
+                        <p:dialog widgetVar="dlg" header="Sonuç" modal="true">
+                            <h:panelGrid columns="2">
+                                Aylık Miktar: <h:outputText value="#{hesapBean.taksitTutari}"/>
+                                Toplam Miktar: <h:outputText value="#{hesapBean.toplamMiktar}"/>
+                            </h:panelGrid>
+                        </p:dialog>
+                        
+      
+                    </p:tab>
+                </p:tabView>
             </h:form>
     </h:body>
 </ui:composition>
