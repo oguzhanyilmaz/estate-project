@@ -6,6 +6,9 @@
                 xmlns:f="http://java.sun.com/jsf/core">
     <h:form id="menuForm">
                 <p:menubar>
+                    
+                    <p:menuitem action="#{loginBean.anaSayfa()}" icon="ui-icon-home" value="Ana Sayfa"></p:menuitem>
+                    
                     <p:menuitem value="Yeni Kayıt" action="#{saveBean.kayitYonlendir()}"/>           
                         
                         <p:submenu label="Müşteri Takip">

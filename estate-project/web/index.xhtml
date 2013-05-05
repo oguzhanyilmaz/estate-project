@@ -16,8 +16,17 @@
             
             <ui:param name="pageTitle" value="Ana Sayfa"/>
             <ui:define name="content" >
-    
-                Hoşgeldiniz..
+                <p:fieldset  legend="Emlak Haberleri">
+                    <p:scrollPanel style="width: 705px; height: 390px;" mode="native">
+                        <p:feedReader value="http://www.konuthaberleri.com/rss_haber.xml" var="feed" size="20">
+                            <a href="#{feed.link}" target="self"><h:outputText value="#{feed.title}" style="font-size: 15px; font-weight: bold;"/></a>
+                            <br />
+                            <h:outputText value="#{feed.description.value}" escape="false"/>
+                            <br/><br/><br/><br/><br/><br/><br/><br/>
+                            <p:separator/>
+                        </p:feedReader>
+                    </p:scrollPanel>
+                </p:fieldset>
             </ui:define>
             
         </ui:composition>

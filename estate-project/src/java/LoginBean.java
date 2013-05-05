@@ -30,6 +30,11 @@ public class LoginBean implements Serializable{
             return null;}
     }
     
+    public String anaSayfa(){
+        return "/index.xhtml?faces-redirect=true";
+    }
+    
+    
     
     
 }
